@@ -8,8 +8,8 @@ header {
     background-color: #20c997;
     color: white;
     padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -23,11 +23,12 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
 }
 
 nav ul li {
-    margin-left: 1.5rem;
 }
 
 nav a {
@@ -42,9 +43,11 @@ nav a:hover {
 }
 
 main {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     padding: 2rem;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
 }
 
 article {
@@ -56,8 +59,7 @@ article {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
 }
 
 fieldset {
@@ -117,7 +119,6 @@ aside {
     background-color: #e6fff9;
     padding: 1.5rem;
     border-radius: 10px;
-    margin-left: 2rem;
     border-left: 5px solid #20c997;
 }
 
