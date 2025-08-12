@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --sidebar-bg: #363740;
+    --main-bg: #F7F8FC;
+    --sidebar-text: #A4A6B3;
+    --sidebar-active-text: #DDE2FF;
+    --sidebar-active-border: #DDE2FF;
+    --card-border: #DFE0EB;
+    --card-active-border: #D83A3A;
+    --main-text: #252733;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    display: flex;
+    background-color: var(--main-bg);
+    color: var(--main-text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar {
+    flex-basis: 255px;
+    flex-shrink: 0;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.student-info {
+    padding: 30px;
+    text-align: center;
+}
+
+.student-info .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.student-info h2 {
+    font-size: 1rem;
+    color: var(--sidebar-active-text);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.student-info p {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.student-info p a {
+    color: var(--sidebar-text);
+    text-decoration: underline;
+}
+
+.main-nav ul {
+    list-style: none;
+    border-top: 1px solid #4e4f5a;
+}
+
+.main-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.main-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.main-nav li.active a {
+    background-color: rgba(221, 226, 255, 0.08);
+    color: var(--sidebar-active-text);
+    border-left-color: var(--card-active-border);
+}
+
+.main-nav li a img {
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+}
+
+.header-title .header-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+
+.header-title h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header-title p {
+    color: var(--sidebar-text);
+}
+
+.header-actions a {
+    margin-left: 25px;
+    color: var(--sidebar-text);
+    transition: color 0.2s ease;
+}
+
+.header-actions a img {
+    width: 24px;
+    height: 24px;
+}
+
+.header-actions a:hover {
+    color: var(--main-text);
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--card-active-border);
+    color: var(--card-active-border);
+}
+
+.card.active {
+    border-color: var(--card-active-border);
+    color: var(--card-active-border);
+}
+
+.card.active .card-header {
+    background-color: var(--card-active-border);
+    color: #fff;
+}
+
+.card-header {
+    padding: 10px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--card-border);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+}
