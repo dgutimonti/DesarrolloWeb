@@ -5,7 +5,6 @@
     --color-fondo-gris-oscuro: #585858;
     --color-texto-principal: #333;
     --color-borde-gris: #e0e0e0;
-    --color-azul-texto: #005daa;
 }
 
 body {
@@ -29,13 +28,13 @@ body {
     font-size: 18px;
     font-weight: bold;
     display: flex;
-    align-items: center; /* Centra los íconos verticalmente */
+    align-items: center; 
     gap: 15px;
 }
 
 .contenedor-busqueda {
     display: flex;
-    margin-left: auto; /* Empuja la barra de búsqueda a la derecha */
+    margin-left: auto; 
     border: 1px solid #ccc;
     background-color: white;
 }
@@ -98,7 +97,7 @@ body {
     height: 80px;
 }
 
-/* --- BARRA DE NAVEGACIÓN (CORREGIDA) --- */
+/* --- BARRA DE NAVEGACIÓN  --- */
 .barra-navegacion {
     display: flex;
     background-color: #6d6e71;
@@ -116,15 +115,17 @@ body {
 }
 
 .barra-navegacion li a {
-    display: block;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-amarillo-oep);
     padding: 12px 15px;
+    height: 40px; 
     color: var(--color-texto-principal);
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
     border-radius: 4px;
-    white-space: nowrap;
 }
 
 /* --- CONTENIDO PRINCIPAL --- */
@@ -136,16 +137,26 @@ main {
 .contenido-destacado {
     display: flex;
     gap: 20px;
-    border: 3px solid var(--color-amarillo-oep);
-    background-color: white;
     padding: 15px;
 }
-/* Columna Derecha */
+.columna-izquierda {
+    flex-basis: 80%;
+    display: flex;
+    background-color: var(--color-amarillo-oep);
+    gap: 15px;
+    position: relative;
+}
+.informacion {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    gap: 15px;
+}
 .columna-derecha {
     flex-basis: 20%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 .columna-derecha a {
     display: flex;
@@ -168,3 +179,27 @@ main {
     font-size: 18px;
     color: var(--color-azul-texto);
 }
+
+.slider-arrow {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: var(--color-amarillo-oep);
+    color: var(--color-texto-principal);
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10; 
+    text-decoration: none;
+}
+
+.arrow-left {
+    left: 0; 
+}
+
+.arrow-right {
+    right: 0;
+}
+

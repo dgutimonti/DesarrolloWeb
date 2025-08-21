@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <div class="logo"></div>
+            <span class="titulo">Website Name</span>
+        </header>
+
+        <div class="principal">
+            <aside class="barra-lateral">
+                <p><b>Inicio</b></p>
+                <p><b>Formulario</b></p>
+                <p><b>Acerca de</b></p>
+            </aside>
+
+            <main class="contenido">
+                <h2>Contáctanos</h2>
+                <hr>
+                <form>
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" value="Richar Ojeda V">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" value="richarojeda@gmail">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="sitio">Sitio web:</label>
+                        <input type="url" id="sitio" value="http://richarojeda.com">
+                    </div>
+                    <div class="grupo-formulario-mensaje">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje"></textarea>
+                    </div>
+                    <div class="acciones-formulario">
+                        <button type="submit" class="boton">Registrar</button>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
