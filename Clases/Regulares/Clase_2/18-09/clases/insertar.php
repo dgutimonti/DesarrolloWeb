@@ -1,17 +1,13 @@
 <?php
-// PRIMERO, le decimos a PHP qué es una "Pila".
 include("pila.php");
 
-// AHORA, iniciamos la sesión.
 session_start();
 
-// La lógica para crear o recuperar la pila de la sesión es la misma.
 if (!isset($_SESSION['pila'])) {
     $_SESSION['pila'] = new Pila();
 }
 $pila = $_SESSION['pila'];
 
-// Verificamos que el formulario nos envió el dato usando el método POST.
 if (isset($_POST['elemento']) && $_POST['elemento'] !== '') {
     $elemento_a_insertar = $_POST['elemento'];
     $pila->insertar($elemento_a_insertar);

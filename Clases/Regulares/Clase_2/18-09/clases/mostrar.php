@@ -3,8 +3,6 @@ include("pila.php");
 // Iniciamos la sesión para acceder a los datos.
 session_start();
 
-// Incluimos la clase Pila.
-
 
 echo "<h2>Elementos actuales en la Pila:</h2>";
 
