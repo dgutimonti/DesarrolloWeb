@@ -58,7 +58,7 @@
       <p>Si prefieres, puedes contactarme a través de los siguientes medios:</p>
       <ul>
         <li><strong>Correo Electrónico:</strong> <a
-            href="mailto:daniel.gutierrez@email.com">daniel.gutierrez@email.com</a></li>
+            href="mailto:daniel.gutierrez@email.com">danielgutierrezmonti@gmail.com</a></li>
         <li><strong>Teléfono:</strong> +591 72890458</li>
       </ul>
     </aside>
