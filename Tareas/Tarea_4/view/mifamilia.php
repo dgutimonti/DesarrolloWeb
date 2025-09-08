@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Familia</title>
+  <link rel="stylesheet" href="../public/css/mifamilia.css">
+</head>
+
+<body>
+  <header>
+    <h1>Mi Familia</h1>
+    <?php include("navbar.php");?>
+  </header>
+  <main>
+    <article>
+      <h2>El núcleo de mi vida</h2>
+      <p>Mi familia es mi mayor tesoro y mi principal fuente de apoyo. De ellos he aprendido el valor del trabajo, la
+        honestidad y el amor incondicional. Siempre estamos ahí para apoyarnos en las buenas y en las malas.</p>
+
+      <section>
+        <h3>Miembros de la Familia</h3>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Parentesco</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fernando Gutierrez</td>
+              <td>Padre</td>
+              <td>Mi ejemplo a seguir en trabajo y honestidad.</td>
+            </tr>
+            <tr>
+              <td>Nimiam Montiel</td>
+              <td>Madre</td>
+              <td>La persona que me ha enseñado sobre el amor incondicional.</td>
+            </tr>
+            <tr>
+              <td>Giovanna</td>
+              <td>Hermana Mayor</td>
+              <td>Una persona llena de sabiduría y alegría.</td>
+            </tr>
+            <tr>
+              <td>Luis</td>
+              <td>Hermano</td>
+              <td>Un gran compañero de aventuras y confidente.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h3>Galería Familiar</h3>
+        <figure>
+          <img src="../public/img/familia.png" alt="Foto familiar 1">
+          <figcaption>Recuerdo de un viaje familiar.</figcaption>
+        </figure>
+        <figure>
+          <img src="../public/img/familia.png" alt="Foto familiar 2">
+          <figcaption>Celebrando un cumpleaños.</figcaption>
+        </figure>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2025</p>
+  </footer>
+</body>
+
+</html>

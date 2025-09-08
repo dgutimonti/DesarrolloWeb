@@ -1,16 +1,45 @@
 <?php
+session_start();
 include("conexion.php");
+include("proteger.php");
 
-$sql="SELECT id, nombres, apellidos, sexo, numero_documento from padron";
-$result=$con->query($sql);
+if (isset($_GET['orden'])){
+    $orden=$_GET['orden'];
+} else{
+    $orden=$id;
+}
+
+$buscar='%';
+
+if (isset($_GET['buscar'])){
+    $buscar='%'.$_GET['buscar'].'%';
+} else
+{
+
+}
+$sql = "SELECT p.id, fotografia, nombres, apellidos, sexo, numero_documento, ocupacion 
+LEFT JOIN ocuapciones o ON p.ocupacion_id=o.id
+WHERE nombres LIKE  ?
+ORDER BY ?";
+
+$stmt=$con->prepare($sql);
+$stmt->bind_param("si", $buscar, $orden);
+$stmt->execute();
+$result=$stmt->get_result();
+
+
 ?>
-
+<form action="" method="get">
+    <label for="buscar">buscar</label>
+    <input type="text" name="buscar">
+    <input type="submit" value="Buscar">
+</form>
 <table border="1">
     <tr>
-        <th>Nombres</th>
-        <th>Apellido</th>
-        <th>Sexo</th>
-        <th>Numero Documento</th>
+        <th><a href="read.php?">Nombres</a></th>
+        <th><a href="">Apellido</a></th>
+        <th><a href="">Sexo</a></th>
+        <th><a href="">Numero Documento</a></th>
     </tr>
     <?php
         while($row=mysqli_fetch_array($result)){
@@ -19,17 +48,28 @@ $result=$con->query($sql);
                 <td><?php echo $row['nombres'];?></td>
                 <td><?php echo $row['apellidos'];?></td>
                 <td><?php echo $row['sexo']?>;</td>
+                <td><?php echo $row['ocupacion'];?></td>
                 <td>
+                    <?php if ($_SESSION['rol'] == 'admin')
+                    {
+                        ?>
+
                     <a href="form-edit.php?<?php echo $row['id'];?>">Edit</a>
                     <a href="delete.php?id=<?php echo $row['id'];?>">Eliminar</a>
 
+                    <?php}
+                ?>
                 </td>
             </tr>
             <?php
         }
         ?>
 </table>
+<?php if ($_SESSION['rol'] == 'admin'){
+    ?>
 <a href="insertar.php">insertart</a>
+?>
+}
 <?php
 // /*
 // Este script PHP se encarga de leer datos de la tabla 'padron' en la base de datos y mostrarlos en una tabla HTML.
