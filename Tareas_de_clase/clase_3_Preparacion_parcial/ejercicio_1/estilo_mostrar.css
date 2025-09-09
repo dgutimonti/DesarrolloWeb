@@ -1,0 +1,46 @@
+.name{
+    border: 1px solid black;
+    background-color: #e1f7fa;
+    justify-content: center;
+    margin: 3px;
+    padding: 3%;
+}
+.lastname{
+    border: 1px solid black;
+    background-color: #e9f5ea;
+    justify-content: center;
+    margin: 3px;
+    padding: 3%;
+}
+.sex{
+    border: 1px solid black;
+    background-color: #fff8e0;
+    justify-content: center;
+    margin: 3px;
+    padding: 3%;
+}
+.adress{
+    border: 1px solid black;
+    background-color: #fce3ec;
+    justify-content: center;
+    margin: 3px;
+    padding: 3%;
+}
+.tel{
+    border: 1px solid black;
+    background-color: #ece6f5;
+    justify-content: center;
+    margin: 3px;
+    padding: 3%;
+}
+.email{
+    border: 1px solid black;
+    background-color: #e3f2fc;
+    justify-content: center;
+    margin: 3px;
+    padding: 3%;    
+}
+.contenido{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
