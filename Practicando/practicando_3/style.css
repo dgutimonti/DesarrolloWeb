@@ -1,0 +1,97 @@
+/* Es una metodologia que significa
+
+BEM = Bloque Elemento Modificador 
+
+Se usa CLASS no ID
+
+CLASS = aplicar estilos
+id = aplicar fincionalidad (JS)
+
+.bloque
+.bloque__elemento
+.bloque__elemento--modificador
+
+
+1. tamanos
+2. margenes
+3. bordes
+4. lo que sea
+
+No usar IDs
+No usar etiquetas
+Que todo sea un key selector(seleccionar justo elemento al cual se le dara estilos)
+*/
+
+/* BEM */
+
+ .cards {
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 10px;
+}
+
+.cards__card {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    margin: 5px;
+    background-color: lightblue;
+}
+/* contexto / keyselector */
+.card__tittle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card__content {
+    padding: 10px;
+    background: green;
+    color: white;
+    text-decoration: none;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* clasica */
+/* .cards {
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 10px;
+}
+
+.cards .card {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    margin: 5px;
+    background-color: lightblue;
+}
+/* contexto / keyselector */
+/* .cards .card h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cards .card a {
+    padding: 10px;
+    background: green;
+    color: white;
+    text-decoration: none;
+} */ 
