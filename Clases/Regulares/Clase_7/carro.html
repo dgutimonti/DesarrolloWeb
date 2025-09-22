@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function coche(marca, modelo, color){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.color = color;
+        }
+        function Mostrar(){
+            document.writeln(this.marca + "<br>");
+            document.writeln(this.modelo + "<br>");
+            document.writeln(this.color + "<br>");
+        }
+        coche1 = new coche("Seat", "Toledo", "azul");
+        Mostrar.call(coche1);
+    </script>
+</body>
+</html>

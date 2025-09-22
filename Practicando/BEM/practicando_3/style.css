@@ -51,7 +51,13 @@ Que todo sea un key selector(seleccionar justo elemento al cual se le dara estil
     color: white;
     text-decoration: none;
 } 
+.card__link {
+    text-decoration: none;
+}
 
+.card__link--rojo {
+    background-color: red;
+}
 
 
 
