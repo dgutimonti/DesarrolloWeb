@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="elemento">Agregar a la lista
+        <input type="text" id="elemento">
+    </label>
+    <input type="button" value="Agregar" id="button" onclick="Agregar()">
+    <ul id="lista">
+    </ul>
+    <script>
+        document.getElementById("button").onclick = function() {
+            let lista = document.getElementById("lista");
+            let elemento = document.getElementById("elemento").value;
+            lista.innerHTML += "<li>" + elemento + "</li>";
+        }
+    </script>
+</body>
+</html>

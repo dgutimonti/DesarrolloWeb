@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="numero">Numero de elementos a sumar: 
+        <input type="number" name="numero" id="numero">
+        <button id="btnCrear">Crear</button>
+    </label>
+    <div id="contenedorInputs">
+    
+    </div>
+    <script>
+        document.getElementById("btnCrear").onclick = function() {
+            let numero = document.getElementById("numero").value;
+            let contenedor = document.getElementById("contenedorInputs");
+            
+            contenedor.innerHTML = "";
+
+            for (let i = 0; i < numero; i++){
+                let input = document.createElement("input");
+                input.className = "inputSuma";
+                input.type = "number";
+                contenedor.appendChild(input);
+
+                let br = document.createElement("br");
+                contenedor.appendChild(br);
+            }
+            
+            if (numero > 0) {
+                let btnSumar = document.createElement("button");
+                btnSumar.innerHTML = "Sumar";
+                contenedor.appendChild(btnSumar).onclick = function() {
+                    
+                    let inputs = document.getElementsByClassName("inputSuma");
+                    let suma = 0;
+                    for (let i = 0; i < inputs.length; i++){
+                        suma += parseInt(inputs[i].value) || 0;
+                    }
+
+                    let divResultado = document.getElementById("resultado");
+                    if (!divResultado) {
+                        divResultado = document.createElement("div");
+                        divResultado.id = "resultado";
+                        divResultado.style.backgroundColor = "yellow";
+                        divResultado.style.border = "1px solid red";
+                        contenedor.appendChild(divResultado);
+                    }
+                    
+                    divResultado.innerHTML = "La suma es: " + suma;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

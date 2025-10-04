@@ -22,4 +22,43 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin-left: 50px;
 }
+.main{
+    display: flex;
+    width: 900px;
+}
+.ejercicios{
+    width: 120px;
+    height: min-content 780px;
+    background-color: grey;
 
+}
+.lista__ejercicios {
+    list-style: none;
+    padding: 4px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lista__ejercicios__item {
+    padding-bottom: 3px;
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+    width: 100px;
+    background-color: white;
+    margin:auto;
+}
+.active{
+    text-decoration: none;
+    color: black;
+}
+
+.informacion {
+      display: flex;
+      gap: 5px;
+      background-color:antiquewhite;
+      width: 780px;
+      padding: 20px 10px;
+      flex-direction: column;
+}

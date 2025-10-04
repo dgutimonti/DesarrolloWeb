@@ -57,8 +57,7 @@ $result=$stmt->get_result();
                     <a href="form-edit.php?<?php echo $row['id'];?>">Edit</a>
                     <a href="delete.php?id=<?php echo $row['id'];?>">Eliminar</a>
 
-                    <?php}
-                ?>
+                <?php } ?>
                 </td>
             </tr>
             <?php

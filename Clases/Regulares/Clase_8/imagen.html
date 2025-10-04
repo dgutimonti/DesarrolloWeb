@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="logo.jpg"  id="myImagen">
+    <br><br>
+    <input type="button" onclick="changeSrc()" value="Cambiar Imagen">
+    <script>
+        function changeSrc() {
+            let img = document.getElementById("myImagen");
+            if (img.src.match("logo.jpg")) {
+                img.src = "logo2.jpg";
+            } else {
+                img.src = "logo.jpg";
+            }
+        }
+    </script>
+</body>
+</html>

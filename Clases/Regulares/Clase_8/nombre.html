@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pintar">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, iusto dignissimos animi molestiae minima cumque fugiat, eum delectus, mollitia quod dolore nobis asperiores non eius! Explicabo iusto voluptates illum perferendis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, atque? Obcaecati porro asperiores, culpa veritatis neque debitis maiores commodi ex tenetur praesentium tempora cupiditate adipisci nam dolorum vel facere! Magni?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quam cum blanditiis omnis repellat nobis ullam, quisquam voluptate eius. Impedit iste facilis aliquid in placeat, consequatur suscipit mollitia fuga voluptatibus!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, explicabo natus suscipit quo quisquam architecto? Voluptatibus recusandae ipsum saepe, sit necessitatibus modi illum dolore amet quo corporis veritatis aperiam velit?</p>
+        <p>Placeat assumenda, vitae natus voluptate omnis quasi autem illo nobis eaque nemo cumque adipisci reprehenderit velit dicta voluptatum magni soluta laborum recusandae. Quos sed ducimus quia at architecto corporis consequuntur?</p>
+        <p>Recusandae pariatur cupiditate iure? Ab quos corrupti voluptatem ducimus, tenetur laudantium debitis impedit assumenda, asperiores aspernatur corporis inventore odio, totam modi architecto blanditiis in nisi tempore porro et dolorem quas?</p>
+        <p>Dicta, enim libero saepe facere, temporibus fugit minus ducimus fugiat eaque deleniti tempora culpa illum ex omnis reiciendis et reprehenderit. Ut iusto, explicabo ipsum deserunt incidunt alias perspiciatis accusantium quis.</p>
+        <p>Illum omnis eos obcaecati in quis excepturi eveniet tempora eligendi, explicabo deleniti nostrum nesciunt. Aperiam deserunt ipsa ratione esse iste culpa, explicabo harum nulla et consequuntur exercitationem dicta fugit numquam!</p>
+        <p>Voluptate culpa soluta voluptatibus perspiciatis eum nesciunt ipsum magnam, quos doloremque recusandae dignissimos aliquid voluptas pariatur aperiam reiciendis ex iusto vitae illum laborum animi dolore debitis. Illo nihil natus distinctio.</p>
+    </div>
+    <button id="btnMostrarOcultar" onclick="MostrarOcultar()">Mostrar/Ocultar</button>
+    <button id="btnPintar" onclick="Pintar()">Pintar</button>
+    <button id="btnCambiarColor" onclick="CambiarColor()">Cambiar Color</button>
+    <script>
+        function MostrarOcultar() {
+
+            let parrafos = document.getElementsByTagName("p");
+            for (i=0; i < parrafos.length; i++) {
+                parrafos[i].style.display = parrafos[i].style.display === "none" ? "block" : "none";
+            }
+        }
+        function Pintar() {
+
+            let parrafos = document.getElementsByTagName("p");
+            for (i=0; i < parrafos.length; i++) {
+
+                if (i % 3 == 0){
+                    parrafos[i].style.backgroundColor = "red";
+                } else if (i % 3 == 1) {
+                    parrafos[i].style.backgroundColor = "yellow";
+                } else {
+                    parrafos[i].style.backgroundColor = "green";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

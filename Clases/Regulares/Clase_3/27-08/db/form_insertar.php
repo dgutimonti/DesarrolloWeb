@@ -45,8 +45,9 @@
                 {
                 ?>
                 <option value=""><?php echo $row['id'];?></option>
+                <?php
                 }
-
+                ?>
             </select>
 
         </div>
