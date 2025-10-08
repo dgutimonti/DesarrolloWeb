@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 2</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50px;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const numero = parseInt(prompt("Ingresar un numero: "));
+        if (numero) {
+            document.write("<table>");
+            document.write("<tr><th>Operador 1</th><th>Operacion</th><th>Operador 2</th><th> </th><th>Resultado</th></tr>");
+
+            for (let i = 1; i <= 10; i++){
+                document.write(`<tr><td>${numero}</td><td>+</td><td>${i}</td><td>=</td><td class='resultado'>${numero + i}</td></tr>`);
+            }
+            document.write("</table>");
+            document.write('<br><input type="color" id="colorPicker">');
+             document.write('<button onclick="cambiarColor()">Cambiar Color</button>');
+
+        }
+        
+        function cambiarColor(){
+            const color = document.getElementById('colorPicker').value;
+            const celdasResultado = document.getElementsByClassName('resultado');
+            for (let i = 0; i < celdasResultado.length; i++) {
+                celdasResultado[i].style.backgroundColor = color;
+            }
+        }
+     </script>
+</body>
+</html>

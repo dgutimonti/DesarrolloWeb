@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+     <label for="elemento">Elemento Lista
+        <input type="text" id="elemento">
+     </label>
+
+     <label for="color">Color
+        <input type="color" id="color">
+     </label>
+     <button onclick="anadir()">Añadir</button>
+     <ul id="lista">Lista</ul>
+     <script>
+        const elementoInput = document.getElementById('elemento');
+        const colorInput = document.getElementById('color');
+        
+         function anadir() {
+           const elemento = elementoInput.value;
+           const color = colorInput.value;
+
+           if(elemento) {
+            const nuevoElemento = document.createElement('li');
+            nuevoElemento.textContent = elemento;
+            nuevoElemento.style.color = color;
+            lista.appendChild(nuevoElemento);
+            elementoInput.value = '';
+           }
+         }
+     </script>
+
+
+</body>
+</html>

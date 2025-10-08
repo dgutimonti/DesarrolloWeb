@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fechaLiteral(fecha) {
+            const dias = ["cero", "uno", "dos", "tres", "cuatro", "cinco","seis", "siete", "ocho", "nueve",
+                "diez", "once", "doce", "trece", "catorce", "quince","dieciseis", "diecisiete",
+                "dieciocho", "diecinueve", "veinte", "veintiuno", "veintidos", "veintitres", "veinticinco",
+                "veintiseis", "veintisiete", "veintiocho", "veintinueve", "treinta", "treinta y uno"];
+            const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", 
+                "agosto", "septiembre", "octubre",
+                "noviembre", "diciembre"];
+
+            const partes = fecha.split('/');
+            const dia = parseInt(partes[0]);
+            const mes = parseInt(partes[1]) - 1;
+            const anio = parseInt(partes[2]);
+
+            const anioLiteral = convertirAnio(anio);
+            return `${dias[dia]} de ${meses[mes]} de ${anioLiteral}`;
+        }
+
+       function convertirAnio(anio) {
+            const unidades = ["", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"];
+            const decenas = ["", "diez", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"];
+            const centenas = ["", "ciento", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos", "ochocientos", "novecientos"];
+
+            if (anio >= 2000) {
+                return "dos mil " + convertirAnio(anio % 1000);
+            } else if (anio >= 1000) {
+                return "mil " + convertirAnio(anio % 1000);
+            } else if (anio >= 100) {
+                const c = Math.floor(anio / 100);
+                const d = anio % 100;
+                if (d === 0) {
+                    return centenas[c];
+                } else {
+                    return centenas[c] + " " + convertirAnio(d);
+                }
+            } else if (anio >= 10) {
+                const d = Math.floor(anio / 10);
+                const u = anio % 10;
+                if (u === 0) {
+                    return decenas[d];
+                } else {
+                    return decenas[d] + " y " + unidades[u];
+                }
+            } else {
+                return unidades[anio];
+            }
+        }
+
+        const fechaIngresada = prompt("Ingresar una fecha con el formato dd/mm/aaaa: ");
+        if (fechaIngresada){
+            const fechaEnLiteral = fechaLiteral(fechaIngresada);
+            document.write(`<h2>${fechaEnLiteral}</h2>`);
+        }
+    </script>
+</body>
+</html>
