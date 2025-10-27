@@ -1,7 +1,6 @@
 <?php
 include('conexion.php');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $num_alumnos = $_POST['num_alumnos'];
     $nombres = $_POST['nombres'];
     $apellidos = $_POST['apellidos'];
@@ -20,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->execute();
         }
     }
-}
 
 $alumnos_query = "SELECT a.fotografia, a.nombres, a.apellidos, a.cu, a.sexo, c.carrera FROM Alumnos a JOIN carreras c ON a.codigocarrera = c.codigo";
 $alumnos_result = mysqli_query($con, $alumnos_query);

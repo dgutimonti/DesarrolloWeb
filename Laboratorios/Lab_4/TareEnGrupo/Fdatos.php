@@ -27,12 +27,12 @@ while ($fila_carrera = mysqli_fetch_assoc($result)) {
     <form action="insertar.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="num_alumnos" value="<?php echo $num_alumnos; ?>" >
         <div>
-            <label for="Fotografia">Fotografia</label>
-            <label for="Nombres">Nombres</label>
-            <label for="Apellidos">Apellidos</label>
-            <label for="CU">CU</label>
-            <label for="Sexo">Sexo</label>
-            <label for="Carrera">Carrera</label>
+            <label for="Fotografia" style="margin-right: 50px">Fotografia</label>
+            <label for="Nombres" style="margin-right: 200px"></label>Nombres</label>
+            <label for="Apellidos" style="margin-right: 80px"></label>Apellidos</label>
+            <label for="CU" style="margin-right: 100px"></label>CU</label>
+            <label for="Sexo" style="margin-right: 150px"></label>Sexo</label>
+            <label for="Carrera" style="margin-right: 50px"></label>Carrera</label>
         </div>
         <?php for($i = 0; $i < $num_alumnos; $i++) {
             ?>
@@ -43,7 +43,7 @@ while ($fila_carrera = mysqli_fetch_assoc($result)) {
                 <input type="text" name="apellidos[]">
                 <input type="text" name="cu[]">
                 
-                <input type="radio" name="sexo[<?php echo $i; ?>]" value="M" required>M
+                <input type="radio" name="sexo[<?php echo $i; ?>]" value="M">M
                 <input type="radio" name="sexo[<?php echo $i; ?>]" value="F">F
                 
                 <select name="codigocarrera[]" required>
