@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <div>
+            <label for="">Nombres</label>
+            <input type="text" name="nombre" id="nombres">
+            <label for="">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos">
+        </div>
+        <div>
+            <label for="fecha_nacimiento">Fecha Nacimiento</label>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+        </div>
+        <div>
+            <label for="carnet">Numero Carnet</label>
+            <input type="number" name="nro_carnet" id="nro_carnet">
+        </div>
+        <div>
+
+            <label for="departamento">departamento</label>
+            <select name="departamento" id="departamento" onclick="cargarContenido()">
+            </select>
+        </div>        
+        <div>
+            <label for="municipio">Municipio</label>
+            <select name="municipio" id="municipio">
+            </select>
+        </div>
+        <div>
+            <label for=""></label>
+        </div>
+            <button type="submit">Registrar</button>
+
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

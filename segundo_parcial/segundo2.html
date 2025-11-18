@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Parcial Alternativo - Maqueta</title>
+
+    <link rel="stylesheet" href="estilos.css">
+      
+    </style>
+
+</head>
+<body>
+
+<header>
+    Segundo Parcial SIS 256 - Tecnologia y Desarrollo Web
+</header>
+
+<div id="info">
+    Estudiante: Gutierrez Montiel Daniel Ivan   &nbsp;&nbsp;|&nbsp;&nbsp; CU: 35-5932
+</div>
+
+<div id="contenedor">
+
+    <div id="menu">
+       
+    <button class="btnMenu" id="btn1" onclick="cargarContenido('catalogo_1.php')">Pregunta 1 </button>
+    <button class="btnMenu" id="btn2" onclick="cargarContenido('select.html')">Pregunta 2 </button>
+    <button class="btnMenu" id="btn3" onclick="cargarContenido('colores.html')">Pregunta 3 </button>
+    <button class="btnMenu" id="btn4">Pregunta 4 </button>
+ 
+    </div>
+    <div id="contenido">
+        <h2>Bienvenido</h2>
+        <p>Seleccione una opción del menú.</p>
+    </div>
+</div>
+<div id="modal">
+<div id="modal-cuerpo">
+
+</div>
+</div>
+<div id="mensaje">
+   Inicializando...
+</div>
+<script src="fetch.js"></script>
+<div id="modal" class="modal" style="display:none;">
+  <div id="modal-cuerpo"></div>
+  <button onclick="cerrarModal()">Cerrar</button>
+</div>
+
+</body>
+</html>

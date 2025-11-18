@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            padding: 0;
+            margin: 0;
+        }
+        .nav-bar {
+            display: flex;
+            width: 100%;
+            height: 70px;
+            background-color:cornflowerblue;
+            justify-content: space-between;
+        }
+        .nav-bar li ul {
+            margin-left: 0;
+            padding-left: 0;
+        }
+       .nav-bar li ul button {
+            background-color: grey;
+            width: 100px;
+            margin: 2px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .content {
+            width: 100%;
+            height: 600px;
+            background-color: beige;
+        }
+        .history {
+            width: 100%;
+            height: 70px;
+            background-color:gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar" id="barra">
+        <li style="display: flex; flex-direction: row; justify-content: right;" id="menu-buttons">
+            <ul><button onclick="mostrarInicio()"">Inicio</button></ul>
+            <ul><button onclick="cargarContenido()">Pregunta 1</button></ul>
+            <ul><button onclick="cargarContenido()">Pregunta 2</button></ul>
+            <ul><button onclick="cargarContenido()">Pregunta 3</button></ul>
+            <ul><button onclick="cargarContenido()">Pregunta 4</button></ul>
+        </li>
+        <button style="background-color: brown; width: 7%;" onclick="toggleMenu()">Menu</button>
+    </div>
+    <div class="content" id="contenido">
+        
+    </div>
+    <div class="history" id="historial">
+
+    </div>
+    <script src="fetch.js">
+
+    </script>
+</body>
+</html>

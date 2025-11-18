@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    height: 800px;
+    width: 20%;
+    background-color: burlywood;
+}
+.navbar ul{
+    list-style: none;
+    padding-left: 20px;
+}
+
+.main{
+    height: 800px;
+    width: 80%;
+    background-color: lightgray;
+}

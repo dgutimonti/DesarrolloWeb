@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Citas Medicas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;      
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 20px auto;
+            background-color: white;
+        }
+
+        .menu {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .menu h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .menu-section {
+            margin: buttom 25px;
+        }
+
+        .menu-section h3 {
+            color: #3498db;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .menu-button {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0;
+            background-color: #34495e;
+            color: white;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .contenido {
+            flex:1;
+            padding: 30px;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 50px;
+        }
+        .welcome h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .welcome p {
+            color: #7f8c8d;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h2>Sistema de Citas Medicas</h2>
+            <div class="menu-section">
+                <h3>Medicos</h3>
+                <button onclick="cargarContenido('medicos/readMedicos.php')">Ver Medicos</button>
+                <button onclick="cargarContenido('medicos/formMedico.html')">Nuevo Medico</button>
+            </div>
+
+            <div class="menu-section">
+                <h3>Pacientes</h3>
+                <button onclick="cargarContenido('pacientes/readPacientes.php')">Ver Pacientes</button>
+                <button onclick="cargarContenido('pacientes/formPaciente.html')">Nuevo Paciente</button>
+            </div>
+            
+            <div class="menu-section">
+                <h3>Citas</h3>
+                <button onclick="citas/readCitas.php">Ver Citas</button>
+                <button onclick="citas/formCita.html">Nueva Cita</button>
+            </div>
+        </div>
+        
+        <div class="contenido" id="contenido">
+            <div class="welcome">
+                <h1>Bienvenido al Sistema de Citas medicas</h1>
+                <p>Seleccione una opcion del menu para comenzar</p>
+            </div>
+        </div>
+        
+    </div>
+    <script src="fetch.js"></script>
+</body>
+</html>

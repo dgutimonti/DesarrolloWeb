@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#login button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #333;
+    padding: 5px;
+    text-align: center;
+}
+
+nav button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+nav button:hover {
+    background-color: #777;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+}
+
+#barra {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#contenido {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    min-height: 300px;
+}
+
+#historial {
+    grid-column: 1 / -1;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#contenido img {
+    width: 75px;
+    height: 100px;
+    cursor: pointer;
+    margin: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.modal-content img {
+    width: 200px;
+    height: 300px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#contenido table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#contenido td {
+    width: 33.33%;
+    height: 100px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}

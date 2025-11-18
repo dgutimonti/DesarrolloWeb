@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background-image: url('images/fondo.jpg');
+        background-size: cover;
+        background-position: center;
+        }
+
+        h2{
+        color: #E5E7EB;
+        font-family: 'Open Sans', sans-serif;
+        }
+
+        h1{
+        color: #E5E7EB;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        }
+
+        form{
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #e5e7ebe0;
+        color: #34A193;
+        padding: 30px;
+        margin: 20px auto;
+        }
+
+        label{
+        font-family: 'Open Sans', sans-serif;
+        color: #34A193;
+        padding: 10px;
+        margin: 20px auto;
+        }
+        input{
+        border-radius: 5px;
+        margin: 5px;
+        padding: 7px;
+        }
+
+        input[type="submit"]{
+        background-color: #34A193;
+        color: #374151;
+        padding: 7px;
+        }
+
+        select{
+        border-radius: 5px;
+        margin: 5px;
+        padding: 7px;
+        }
+
+        table {
+        background-color: #E5E7EB;
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 90%;
+        }
+
+        table th, table td {
+        border: 1px solid #374151;
+        padding: 8px 12px;
+        text-align: center;
+        }
+
+        table a{
+        background-color: #34A193;
+        color: #374151;
+        text-decoration: none;
+        padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; border: 1px solid black; padding: 15px; margin: 30px auto; width: 1200px; min-height: 640px; border-radius: 15px; background-color: #E5E7EB;">
+        <div id="opciones" style="border: 1px solid black; text-align: center; align-items: center; width: 230px;min-height: 620px; margin-right: 10px; border-radius: 15px; background-color: #2E5A88;"></div>
+        <div id="contenido" style="border: 1px solid black; width: 940px; min-height: 620px; border-radius: 15px; overflow-y: scroll; background-color: #2E5A88;">
+            <h2 style="text-align: center;">Contenido</h2>
+            <div id="lista-usuarios" style="margin: 10px;">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
